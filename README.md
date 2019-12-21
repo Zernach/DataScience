@@ -2,9 +2,6 @@
 <div align="center">
   <img src="https://github.com/MedicinalCabinet/DataScience/blob/master/Images/header.jpg"><br>
 </div>
-### **Acknowledgements**
-
-leafly.com
 
 ### **Inspiration**
 
