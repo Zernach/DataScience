@@ -27,8 +27,6 @@ Find our data [here](https://www.kaggle.com/kingburrito666/cannabis-strains#cann
 
 **Effects**: different effects optained
 
-**Taste**: taste of smoke
-
 **Description**: backround, etc
 
 ---
@@ -36,6 +34,8 @@ Find our data [here](https://www.kaggle.com/kingburrito666/cannabis-strains#cann
 # **Dependencies**
 
 - [Spacy](https://spacy.io/api/doc)
+- [Scikit-Learn](https://scikit-learn.org/stable/modules/classes.html)
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/#)
 - [Green Unicorn](https://gunicorn.org/)
 
