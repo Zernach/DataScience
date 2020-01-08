@@ -9,6 +9,13 @@ verify_ssl = true
 gunicorn = "*"
 spacy = "*"
 flask = "*"
+dash = "*"
+dash-bootstrap-components = "*"
+dash-core-components = "*"
+joblib = "*"
+scikit-learn = "*"
+category-encoders = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.7"
