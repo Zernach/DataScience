@@ -57,21 +57,21 @@ column1 = dbc.Col(
         dcc.Dropdown(
             id      = 'Feelings',
             options = [
-                {'label': 'Happy',     'value': 'Happy'},
-                {'label': 'Relaxed',   'value': 'Relaxed'},
-                {'label': 'Euphoric',  'value': 'Euphoric'},
-                {'label': 'Uplifted',  'value': 'Uplifted'},
-                {'label': 'Creative',  'value': 'Creative'},
-                {'label': 'Sleepy',    'value': 'Sleepy'},
-                {'label': 'Energetic', 'value': 'Energetic'},
-                {'label': 'Focused',   'value': 'Focused'},
-                {'label': 'Hungry',    'value': 'Hungry'},
-                {'label': 'Talkative', 'value': 'Talkative'},
-                {'label': 'Tingly',    'value': 'Tingly'},
-                {'label': 'Giggly',    'value': 'Giggly'},
-                {'label': 'Aroused',   'value': 'Aroused'},
+                {'label': 'Happy',     'value': 1},
+                {'label': 'Relaxed',   'value': 2},
+                {'label': 'Euphoric',  'value': 3},
+                {'label': 'Uplifted',  'value': 4},
+                {'label': 'Creative',  'value': 5},
+                {'label': 'Sleepy',    'value': 6},
+                {'label': 'Energetic', 'value': 7},
+                {'label': 'Focused',   'value': 8},
+                {'label': 'Hungry',    'value': 9},
+                {'label': 'Talkative', 'value': 10},
+                {'label': 'Tingly',    'value': 11},
+                {'label': 'Giggly',    'value': 12},
+                {'label': 'Aroused',   'value': 13},
             ],
-            value     = ['Happy'],
+            value     = [1],
             multi     = True,
             className = 'mb-3',
             #placeholder='Select Preferred Feelings...'
@@ -81,60 +81,60 @@ column1 = dbc.Col(
         dcc.Dropdown(
             id      = 'Tastes',
             options = [
-                {'label': 'Earth',      'value': 'Earth'},
-                {'label': 'Sweet',      'value': 'Sweet'},
-                {'label': 'Citrus',     'value': 'Citrus'},
-                {'label': 'Pungent',    'value': 'Pungent'},
-                {'label': 'Berry',      'value': 'Berry'},
-                {'label': 'Pine',       'value': 'Pine'},
-                {'label': 'Wood',       'value': 'Wood'},
-                {'label': 'Floral',     'value': 'Floral'},
-                {'label': 'Diesel',     'value': 'Diesel'},
-                {'label': 'Herbal',     'value': 'Herbal'},
-                {'label': 'Spicy',      'value': 'Spicy'},
-                {'label': 'Lemon',      'value': 'Lemon'},
-                {'label': 'Skunk',      'value': 'Skunk'},
-                {'label': 'Tropical',   'value': 'Tropical'},
-                {'label': 'Blueberry',  'value': 'Blueberry'},
-                {'label': 'Grape',      'value': 'Grape'},
-                {'label': 'Orange',     'value': 'Orange'},
-                {'label': 'Cheese',     'value': 'Cheese'},
-                {'label': 'Pepper',     'value': 'Pepper'},
-                {'label': 'Lime',       'value': 'Lime'},
-                {'label': 'Strawberry', 'value': 'Strawberry'},
-                {'label': 'Minty',      'value': 'Minty'},
-                {'label': 'Pineapple',  'value': 'Pineapple'},
-                {'label': 'Sage',       'value': 'Sage'},
-                {'label': 'Grapefruit', 'value': 'Grapefruit'},
-                {'label': 'Chemical',   'value': 'Chemical'},
-                {'label': 'Lavender',   'value': 'Lavender'},
-                {'label': 'Fruity',     'value': 'Fruity'},
-                {'label': 'Vanilla',    'value': 'Vanilla'},
-                {'label': 'Mango',      'value': 'Mango'},
-                {'label': 'Honey',      'value': 'Honey'},
-                {'label': 'Ammonia',    'value': 'Ammonia'},
-                {'label': 'Nutty',      'value': 'Nutty'},
-                {'label': 'Coffee',     'value': 'Coffee'},
-                {'label': 'Menthol',    'value': 'Menthol'},
-                {'label': 'Butter',     'value': 'Butter'},
-                {'label': 'Mint',       'value': 'Mint'},
-                {'label': 'Tea',        'value': 'Tea'},
-                {'label': 'Apple',      'value': 'Apple'},
-                {'label': 'Rose',       'value': 'Rose'},
-                {'label': 'Apricot',    'value': 'Apricot'},
-                {'label': 'Tobacco',    'value': 'Tobacco'},
-                {'label': 'Violet',     'value': 'Violet'},
-                {'label': 'Chestnut',   'value': 'Chestnut'},
-                {'label': 'Tar',        'value': 'Tar'},
-                {'label': 'Peach',      'value': 'Peach'},
-                {'label': 'Sour',       'value': 'Sour'},
-                {'label': 'Pear',       'value': 'Pear'},
-                {'label': 'Plum',       'value': 'Plum'},
-                {'label': 'Tangy',      'value': 'Tangy'},
-                {'label': 'Candy',      'value': 'Candy'},
+                {'label': 'Earth',      'value': 14},
+                {'label': 'Sweet',      'value': 15},
+                {'label': 'Citrus',     'value': 16},
+                {'label': 'Pungent',    'value': 17},
+                {'label': 'Berry',      'value': 18},
+                {'label': 'Pine',       'value': 19},
+                {'label': 'Wood',       'value': 20},
+                {'label': 'Floral',     'value': 21},
+                {'label': 'Diesel',     'value': 22},
+                {'label': 'Herbal',     'value': 23},
+                {'label': 'Spicy',      'value': 24},
+                {'label': 'Lemon',      'value': 25},
+                {'label': 'Skunk',      'value': 26},
+                {'label': 'Tropical',   'value': 27},
+                {'label': 'Blueberry',  'value': 28},
+                {'label': 'Grape',      'value': 29},
+                {'label': 'Orange',     'value': 30},
+                {'label': 'Cheese',     'value': 31},
+                {'label': 'Pepper',     'value': 32},
+                {'label': 'Lime',       'value': 33},
+                {'label': 'Strawberry', 'value': 34},
+                {'label': 'Minty',      'value': 35},
+                {'label': 'Pineapple',  'value': 36},
+                {'label': 'Sage',       'value': 37},
+                {'label': 'Grapefruit', 'value': 38},
+                {'label': 'Chemical',   'value': 39},
+                {'label': 'Lavender',   'value': 40},
+                {'label': 'Fruity',     'value': 41},
+                {'label': 'Vanilla',    'value': 42},
+                {'label': 'Mango',      'value': 43},
+                {'label': 'Honey',      'value': 44},
+                {'label': 'Ammonia',    'value': 45},
+                {'label': 'Nutty',      'value': 46},
+                {'label': 'Coffee',     'value': 47},
+                {'label': 'Menthol',    'value': 48},
+                {'label': 'Butter',     'value': 49},
+                {'label': 'Mint',       'value': 50},
+                {'label': 'Tea',        'value': 51},
+                {'label': 'Apple',      'value': 52},
+                {'label': 'Rose',       'value': 53},
+                {'label': 'Apricot',    'value': 54},
+                {'label': 'Tobacco',    'value': 55},
+                {'label': 'Violet',     'value': 56},
+                {'label': 'Chestnut',   'value': 57},
+                {'label': 'Tar',        'value': 58},
+                {'label': 'Peach',      'value': 59},
+                {'label': 'Sour',       'value': 60},
+                {'label': 'Pear',       'value': 61},
+                {'label': 'Plum',       'value': 62},
+                {'label': 'Tangy',      'value': 63},
+                {'label': 'Candy',      'value': 64},
                 
             ],
-            value     = ['Sweet'],
+            value     = [14],
             multi     = True,
             className = 'mb-3',
             #placeholder='Select your Preferred Tastes...'
@@ -165,62 +165,80 @@ layout = dbc.Row([column1, column2])
     Input('Feelings', 'value'),
     Input('Tastes', 'value')]
 )
-# def predict(input_type = '', input_feelings = [], input_tastes = []):
+def predict(input_type = '', input_feelings = [], input_tastes = []):
+    
+    columns = ['Type', 'Aroused', 'Creative', 'Energetic', 'Euphoric',
+       'Focused', 'Giggly', 'Happy', 'Hungry', 'Relaxed', 'Sleepy',
+       'Talkative', 'Tingly', 'Uplifted', 'Ammonia', 'Apple', 'Apricot',
+       'Berry', 'Blueberry', 'Butter', 'Candy', 'Cheese', 'Chemical',
+       'Chestnut', 'Citrus', 'Coffee', 'Diesel', 'Earthy', 'Floral', 'Fruity',
+       'Grape', 'Grapefruit', 'Herbal', 'Honey', 'Lavender', 'Lemon', 'Lime',
+       'Mango', 'Melon', 'Menthol', 'Mint', 'Minty', 'Nutty', 'Orange',
+       'Peach', 'Pear', 'Pepper', 'Pine', 'Pineapple', 'Plum', 'Pungent',
+       'Rose', 'Sage', 'Skunk', 'Sour', 'Spicy', 'Strawberry', 'Sweet',
+       'Tangy', 'Tar', 'Tart', 'Tea', 'Tobacco', 'Tropical', 'Vanilla',
+       'Violet', 'Wood']
+    
+    data    = [[input_type, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+    
+    # Feelings
+    for feeling in input_feelings:
+        data[0][feeling] = 1
 
-#     df = pd.DataFrame(
-#         columns = ['Type', 'Aroused', 'Creative', 'Energetic', 'Euphoric',
-#        'Focused', 'Giggly', 'Happy', 'Hungry', 'Relaxed', 'Sleepy',
-#        'Talkative', 'Tingly', 'Uplifted', 'Ammonia', 'Apple', 'Apricot',
-#        'Berry', 'Blueberry', 'Butter', 'Candy', 'Cheese', 'Chemical',
-#        'Chestnut', 'Citrus', 'Coffee', 'Diesel', 'Earthy', 'Floral', 'Fruity',
-#        'Grape', 'Grapefruit', 'Herbal', 'Honey', 'Lavender', 'Lemon', 'Lime',
-#        'Mango', 'Melon', 'Menthol', 'Mint', 'Minty', 'Nutty', 'Orange',
-#        'Peach', 'Pear', 'Pepper', 'Pine', 'Pineapple', 'Plum', 'Pungent',
-#        'Rose', 'Sage', 'Skunk', 'Sour', 'Spicy', 'Strawberry', 'Sweet',
-#        'Tangy', 'Tar', 'Tart', 'Tea', 'Tobacco', 'Tropical', 'Vanilla',
-#        'Violet', 'Wood'],
-#         data    = [[input_type, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-#     )
+    # Tastes
+    for taste in input_tastes:
+        data[0][taste]   = 1
     
     
-#     pipeline = load('assets/pipeline.joblib')
-#     y_pred   = pipeline.predict(df)[0]
+    df = pd.DataFrame(
+        columns = columns,
+        data    = data
+    )
     
-#     return f'{input_type}, {y_pred}'
+
+    
+    pipeline     = load('assets/pipeline.joblib')
+    y_pred       = pipeline.predict(df)
+    y_pred_proba = pipeline.predict_proba(df)
+
     
     
-#     if y_pred == '':
-#         y_pred_proba = pipeline.predict_proba(df)[0][0]
-#         return f'{y_pred_proba*100:.0f}% chance of {y_pred}'
+    zipped       = set(zip(pipeline.predict_proba(df)[0], pipeline.classes_))
+    zip_sorted   = sorted(zipped, reverse = True)[:3]
+    
+    
+    unzipped_proba, unzipped_class = zip(*zip_sorted)
+
+    
+    return str(unzipped_class)
+    
+
+    
+    
+    
+# Oldie but a goodie
+# def search(input_type = '', input_effects = [], input_flavor = []):
+
+#     import pandas as pd
+
+
+#     df = pd.read_csv('Data/cannabis_slim.csv')
+#     # Search type
+#     if input_type != '':
+#         df      = df.loc[df['Type'] == input_type]
+
+#     # Search effects
+#     if input_effects != []:
+#         for thing in input_effects:
+#             df  = df.loc[df[thing] == 1]
+
+#     # Search flavor
+#     if input_flavor != []:
+#         for thing in input_flavor:
+#             df  = df.loc[df[thing] == 1]
+    
+
+#     if len(df) == 0:
+#         return 'No results.'
 #     else:
-#         y_pred_proba = pipeline.predict_proba(df)[0][1]
-#         return f'{y_pred_proba*100:.0f}% chance of {y_pred}'
-    
-    
-    
-    
-def search(input_type = '', input_effects = [], input_flavor = []):
-
-    import pandas as pd
-
-
-    df = pd.read_csv('Data/cannabis_slim.csv')
-    # Search type
-    if input_type != '':
-        df      = df.loc[df['Type'] == input_type]
-
-    # Search effects
-    if input_effects != []:
-        for thing in input_effects:
-            df  = df.loc[df[thing] == 1]
-
-    # Search flavor
-    if input_flavor != []:
-        for thing in input_flavor:
-            df  = df.loc[df[thing] == 1]
-    
-
-    if len(df) == 0:
-        return 'No results.'
-    else:
-        return str(df['Strain'] + ' ')
+#         return str(df['Strain'] + ' ')
