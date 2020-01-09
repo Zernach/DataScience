@@ -165,28 +165,54 @@ layout = dbc.Row([column1, column2])
     Input('Feelings', 'value'),
     Input('Tastes', 'value')]
 )
-def predict(input_type = '', input_feelings = [], input_tastes = []):
+def search(input_type = '', input_effects = [], input_flavor = []):
 
-    df = pd.DataFrame(
-        columns = ['Type', 'Aroused', 'Creative', 'Energetic', 'Euphoric',
-       'Focused', 'Giggly', 'Happy', 'Hungry', 'Relaxed', 'Sleepy',
-       'Talkative', 'Tingly', 'Uplifted', 'Ammonia', 'Apple', 'Apricot',
-       'Berry', 'Blueberry', 'Butter', 'Candy', 'Cheese', 'Chemical',
-       'Chestnut', 'Citrus', 'Coffee', 'Diesel', 'Earthy', 'Floral', 'Fruity',
-       'Grape', 'Grapefruit', 'Herbal', 'Honey', 'Lavender', 'Lemon', 'Lime',
-       'Mango', 'Melon', 'Menthol', 'Mint', 'Minty', 'Nutty', 'Orange',
-       'Peach', 'Pear', 'Pepper', 'Pine', 'Pineapple', 'Plum', 'Pungent',
-       'Rose', 'Sage', 'Skunk', 'Sour', 'Spicy', 'Strawberry', 'Sweet',
-       'Tangy', 'Tar', 'Tart', 'Tea', 'Tobacco', 'Tropical', 'Vanilla',
-       'Violet', 'Wood'],
-        data    = [[input_type, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-    )
+    import pandas as pd
+
+
+    df = pd.read_csv('Data/cannabis_slim.csv')
+    # Search type
+    if input_type != '':
+        df      = df.loc[df['Type'] == input_type]
+
+    # Search effects
+    if input_effects != []:
+        for thing in input_effects:
+            df  = df.loc[df[thing] == 1]
+
+    # Search flavor
+    if input_flavor != []:
+        for thing in input_flavor:
+            df  = df.loc[df[thing] == 1]
+    
+
+    if len(df) == 0:
+        return 'No results.'
+    else:
+        return str(df['Strain'] + ' ')
+
+# def predict(input_type = '', input_feelings = [], input_tastes = []):
+
+#     df = pd.DataFrame(
+#         columns = ['Type', 'Aroused', 'Creative', 'Energetic', 'Euphoric',
+#        'Focused', 'Giggly', 'Happy', 'Hungry', 'Relaxed', 'Sleepy',
+#        'Talkative', 'Tingly', 'Uplifted', 'Ammonia', 'Apple', 'Apricot',
+#        'Berry', 'Blueberry', 'Butter', 'Candy', 'Cheese', 'Chemical',
+#        'Chestnut', 'Citrus', 'Coffee', 'Diesel', 'Earthy', 'Floral', 'Fruity',
+#        'Grape', 'Grapefruit', 'Herbal', 'Honey', 'Lavender', 'Lemon', 'Lime',
+#        'Mango', 'Melon', 'Menthol', 'Mint', 'Minty', 'Nutty', 'Orange',
+#        'Peach', 'Pear', 'Pepper', 'Pine', 'Pineapple', 'Plum', 'Pungent',
+#        'Rose', 'Sage', 'Skunk', 'Sour', 'Spicy', 'Strawberry', 'Sweet',
+#        'Tangy', 'Tar', 'Tart', 'Tea', 'Tobacco', 'Tropical', 'Vanilla',
+#        'Violet', 'Wood'],
+#         data    = [[input_type, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+#     )
     
     
-    pipeline = load('assets/pipeline.joblib')
-    y_pred   = pipeline.predict(df)[0]
+#     pipeline = load('assets/pipeline.joblib')
+#     y_pred   = pipeline.predict(df)[0]
     
-    return f'{input_type}, {y_pred}'
+#     return f'{input_type}, {y_pred}'
     
     
 #     if y_pred == '':
@@ -195,32 +221,3 @@ def predict(input_type = '', input_feelings = [], input_tastes = []):
 #     else:
 #         y_pred_proba = pipeline.predict_proba(df)[0][1]
 #         return f'{y_pred_proba*100:.0f}% chance of {y_pred}'
-    
-    
-    
-    
-# def search(input_type = '', input_effects = [], input_flavor = []):
-
-#     import pandas as pd
-
-
-#     df = pd.read_csv('Data/cannabis_slim.csv')
-#     # Search type
-#     if input_type != '':
-#         df      = df.loc[df['Type'] == input_type]
-
-#     # Search effects
-#     if input_effects != []:
-#         for thing in input_effects:
-#             df  = df.loc[df[thing] == 1]
-
-#     # Search flavor
-#     if input_flavor != []:
-#         for thing in input_flavor:
-#             df  = df.loc[df[thing] == 1]
-    
-
-#     if len(df) == 0:
-#         return 'No results.'
-#     else:
-#         return str(df['Strain'] + ' ')
