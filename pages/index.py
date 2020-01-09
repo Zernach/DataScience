@@ -29,7 +29,7 @@ column1 = dbc.Col(
         dcc.Link(dbc.Button("FIND WHICH STRAINS WILL WORK BEST FOR YOU ➡️", color='primary'), href='/predictions'),
         html.Br(),
         html.Br(),
-        dcc.Markdown("""Go back to [MedCabinet Home Page](https://medcabinet-bw1.netlify.com/)""")
+        dcc.Markdown("""Go back to [MedCabinet Home Page](https://frontend-q266youge.now.sh/)""")
     ],
     md=6,
 )
