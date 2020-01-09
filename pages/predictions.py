@@ -54,7 +54,7 @@ column1 = dbc.Col(
         ),
 
         dcc.Markdown('##### **HOW DO YOU WANT TO FEEL?**'),
-        dcc.Checklist(
+        dcc.Dropdown(
             id='Feelings',
             options = [
                 {'label': 'Happy', 'value': 1},
@@ -71,14 +71,14 @@ column1 = dbc.Col(
                 {'label': 'Giggly', 'value': 12},
                 {'label': 'Aroused', 'value': 13},
             ],
-            value = 4,
+            value = 1,
+            multi=True,
             className='mb-3',
-            placeholder='Select Preferred Feelings...'
+            #placeholder='Select Preferred Feelings...'
         ),
 
-
         dcc.Markdown('##### **WHICH TASTES DO YOU LIKE?**'),
-        dcc.Checklist(
+        dcc.Dropdown(
             id='Tastes',
             options = [
                 {'label': 'Earth', 'value': 0},
@@ -133,9 +133,10 @@ column1 = dbc.Col(
                 {'label': 'Tangy', 'value': 49},
                 {'label': 'Candy', 'value': 50},
             ],
-            value = 2,
+            value = 1,
+            multi=True,
             className='mb-3',
-            placeholder='Select your Preferred Tastes...'
+            #placeholder='Select your Preferred Tastes...'
         ),
     ],
     md=4,

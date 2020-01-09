@@ -14,8 +14,8 @@ navbar = dbc.NavbarSimple(
     brand='MEDCABINET -- PREDICT THE STRAIN THAT IS BEST FOR YOU',
     brand_href='/',
     children=[
+        dbc.NavItem(dcc.Link('MEDCABINET HOMEPAGE', href='https://medcabinet-bw1.netlify.com/', className='nav-link')),
         dbc.NavItem(dcc.Link('PREDICTIONS', href='/predictions', className='nav-link')),
-        dbc.NavItem(dcc.Link('MODELING PROCESS', href='/process', className='nav-link')),
     ],
     sticky='top',
     color='primary',
