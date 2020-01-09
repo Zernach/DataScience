@@ -42,20 +42,20 @@ column1 = dbc.Col(
         html.Br(),
 
         dcc.Dropdown(
-            id='Type',
+            id      = 'Type',
             options = [
                 {'label': 'Indica', 'value': 0},
                 {'label': 'Sativa', 'value': 1},
                 {'label': 'Hybrid', 'value': 2}
                 ],
-            value = 2,
-            className='mb-3',
-            placeholder='Select Indica, Sativa, or Hybrid...'
+            value       = 2,
+            className   = 'mb-3',
+            placeholder = 'Select Indica, Sativa, or Hybrid...'
         ),
 
         dcc.Markdown('##### **HOW DO YOU WANT TO FEEL?**'),
         dcc.Dropdown(
-            id='Feelings',
+            id      = 'Feelings',
             options = [
                 {'label': 'Happy',     'value': 'Happy'},
                 {'label': 'Relaxed',   'value': 'Relaxed'},
@@ -71,15 +71,15 @@ column1 = dbc.Col(
                 {'label': 'Giggly',    'value': 'Giggly'},
                 {'label': 'Aroused',   'value': 'Aroused'},
             ],
-            value = ['Happy'],
-            multi=True,
-            className='mb-3',
+            value     = ['Happy'],
+            multi     = True,
+            className = 'mb-3',
             #placeholder='Select Preferred Feelings...'
         ),
 
         dcc.Markdown('##### **WHICH TASTES DO YOU LIKE?**'),
         dcc.Dropdown(
-            id='Tastes',
+            id      = 'Tastes',
             options = [
                 {'label': 'Earth',      'value': 'Earth'},
                 {'label': 'Sweet',      'value': 'Sweet'},
@@ -134,13 +134,13 @@ column1 = dbc.Col(
                 {'label': 'Candy',      'value': 'Candy'},
                 
             ],
-            value = ['Sweet'],
-            multi=True,
-            className='mb-3',
+            value     = ['Sweet'],
+            multi     = True,
+            className = 'mb-3',
             #placeholder='Select your Preferred Tastes...'
         ),
     ],
-    md=4,
+    md = 4,
 )
 
 column2 = dbc.Col(
@@ -150,9 +150,9 @@ column2 = dbc.Col(
     html.Br(),
     html.Br(),
     #html.Img(src='assets/Shapley Force Plots used for explaining decision tree outcome of individual instances -- Ryan Zernach Zernach.com -- Airline Price Predictions.png', className='img-fluid', height=500, width=750),
-    html.H2('Predicted Marijuana Strains for Your Preferences', className= 'mb-3'),
-    html.Div(id='prediction-content', className='lead'),
-    html.Div(id='image')
+    html.H2('Predicted Marijuana Strains for Your Preferences', className = 'mb-3'),
+    html.Div(id = 'prediction-content', className = 'lead'),
+    html.Div(id = 'image')
     ]
     #md=6,
 )
@@ -165,32 +165,6 @@ layout = dbc.Row([column1, column2])
     Input('Feelings', 'value'),
     Input('Tastes', 'value')]
 )
-def search(input_type = '', input_effects = [], input_flavor = []):
-
-    import pandas as pd
-
-
-    df = pd.read_csv('Data/cannabis_slim.csv')
-    # Search type
-    if input_type != '':
-        df      = df.loc[df['Type'] == input_type]
-
-    # Search effects
-    if input_effects != []:
-        for thing in input_effects:
-            df  = df.loc[df[thing] == 1]
-
-    # Search flavor
-    if input_flavor != []:
-        for thing in input_flavor:
-            df  = df.loc[df[thing] == 1]
-    
-
-    if len(df) == 0:
-        return 'No results.'
-    else:
-        return str(df['Strain'] + ' ')
-
 # def predict(input_type = '', input_feelings = [], input_tastes = []):
 
 #     df = pd.DataFrame(
@@ -221,3 +195,32 @@ def search(input_type = '', input_effects = [], input_flavor = []):
 #     else:
 #         y_pred_proba = pipeline.predict_proba(df)[0][1]
 #         return f'{y_pred_proba*100:.0f}% chance of {y_pred}'
+    
+    
+    
+    
+def search(input_type = '', input_effects = [], input_flavor = []):
+
+    import pandas as pd
+
+
+    df = pd.read_csv('Data/cannabis_slim.csv')
+    # Search type
+    if input_type != '':
+        df      = df.loc[df['Type'] == input_type]
+
+    # Search effects
+    if input_effects != []:
+        for thing in input_effects:
+            df  = df.loc[df[thing] == 1]
+
+    # Search flavor
+    if input_flavor != []:
+        for thing in input_flavor:
+            df  = df.loc[df[thing] == 1]
+    
+
+    if len(df) == 0:
+        return 'No results.'
+    else:
+        return str(df['Strain'] + ' ')
